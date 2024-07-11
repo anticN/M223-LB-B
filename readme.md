@@ -3,10 +3,8 @@ Das Ziel der Applikation ist es ein Backend mit einem REST-Interface zu erstelle
 Aufbauend auf dieser Implementierung soll anschliessend ein Sicherheitsmechanismus auf der Basis von [JSON Web Token](https://jwt.io/) implementiert werden.
 
 ## Projekt aufsetzen
-Das Projekt kann von [GitHub](https://github.com/maexeler/ticketing_app) heruntergeladen werden.
+Das Projekt kann von [GitHub](https://github.com/anticN/M223-LB-B) heruntergeladen werden.
 
-## Applikationsdokumentation
-Die Applikationsdokumentation finden sie im Ordner [./doc](./doc/appDoc.md).
 
 ## Die Applikation staren
 Laden sie das Projekt in einen Editor ihrer Wahl und lassen sie [UserApplication.java](./src/main/java/ch/zli/m223/UserApplication.java) laufen.
