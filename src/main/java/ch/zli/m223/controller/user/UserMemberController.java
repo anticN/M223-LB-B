@@ -1,12 +1,8 @@
 package ch.zli.m223.controller.user;
 
 import java.security.Principal;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 import ch.zli.m223.controller.user.dto.UserDto;
 import ch.zli.m223.controller.user.dto.UserUpdateDto;
@@ -20,7 +16,6 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v1/member/users")
 @RequiredArgsConstructor
 public class UserMemberController {
-    
     private final UserService userService;
 
     /**
@@ -52,6 +47,7 @@ public class UserMemberController {
             data.email, data.password, data.role
         ));
     }
+
 
     /**
      * Delete myself from the server

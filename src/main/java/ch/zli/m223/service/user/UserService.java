@@ -3,6 +3,7 @@ package ch.zli.m223.service.user;
 import java.util.List;
 
 import ch.zli.m223.model.AppUser;
+import ch.zli.m223.service.user.exception.InvalidIdException;
 
 public interface UserService {
 

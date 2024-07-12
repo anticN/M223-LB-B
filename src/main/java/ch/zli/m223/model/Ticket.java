@@ -1,7 +1,5 @@
 package ch.zli.m223.model;
 
-import org.apache.catalina.User;
-
 import java.time.LocalDate;
 
 public interface Ticket {

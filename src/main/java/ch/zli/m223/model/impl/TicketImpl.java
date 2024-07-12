@@ -14,8 +14,8 @@ public class TicketImpl implements Ticket {
     @GeneratedValue()
     private Long id;
 
-    @ManyToOne
-    private AppUserImpl user;
+    /*@ManyToOne
+    private AppUserImpl user;*/
 
     @Column(nullable = false)
     private int halfDaysAmount;
@@ -28,10 +28,10 @@ public class TicketImpl implements Ticket {
     private boolean isApproved;
     private boolean isDenied;
 
-    public TicketImpl(int halfDaysAmount, LocalDate startDate, String user) {
+    public TicketImpl(int halfDaysAmount, LocalDate startDate, String username) {
         this.halfDaysAmount = halfDaysAmount;
         this.startDate = startDate;
-        this.username = user;
+        this.username = username;
         this.isDenied = false;
         this.isApproved = false;
     }

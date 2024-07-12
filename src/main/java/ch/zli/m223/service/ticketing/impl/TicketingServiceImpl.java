@@ -8,6 +8,7 @@ import ch.zli.m223.service.ticketing.TicketingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.Principal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,8 +24,8 @@ public class TicketingServiceImpl implements TicketingService {
     private JwtServiceImpl jwtService;
 
     @Override
-    public List<Ticket> getAllTicketsByEmail() {
-        return new ArrayList<Ticket>(ticketRepository.findAll());
+    public List<Ticket> getAllTicketsByEmail(String username) {
+        return new ArrayList<Ticket>(ticketRepository.findAllByUsername(username));
     }
 
     @Override

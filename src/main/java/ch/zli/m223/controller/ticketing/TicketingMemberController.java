@@ -1,6 +1,7 @@
 package ch.zli.m223.controller.ticketing;
 
 import ch.zli.m223.controller.ticketing.dto.TicketDto;
+import ch.zli.m223.controller.ticketing.dto.TicketInputDto;
 import ch.zli.m223.service.ticketing.TicketingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ public class TicketingMemberController {
     TicketingService ticketingService;
 
     @PostMapping("")
-    TicketDto createTicket(@RequestBody TicketDto ticket, Principal principal) {
+    TicketDto createTicket(@RequestBody TicketInputDto ticket, Principal principal) {
         return new TicketDto(ticketingService.createTicket(ticket.halfDaysAmount, ticket.startDate, principal.getName()));
     }
 
@@ -27,8 +28,8 @@ public class TicketingMemberController {
     }
 
     @GetMapping("")
-    List<TicketDto> getTickets() {
-        return ticketingService.getAllTicketsByEmail().stream()
+    List<TicketDto> getTickets(Principal principal) {
+        return ticketingService.getAllTicketsByEmail(principal.getName()).stream()
                 .map((ticket) -> new TicketDto(ticket))
                 .collect(Collectors.toList());
     }
