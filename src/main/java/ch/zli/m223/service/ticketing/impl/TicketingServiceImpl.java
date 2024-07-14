@@ -47,4 +47,18 @@ public class TicketingServiceImpl implements TicketingService {
     public Ticket createTicket(int halfDaysAmount, LocalDate startDate, String username)  {
         return ticketRepository.create(halfDaysAmount, startDate, username);
     }
+
+    @Override
+    public Ticket acceptTicket(Long id, boolean isApproved) {
+        var ticket = ticketRepository.findById(id).orElseThrow();
+        ticket.setApproved(isApproved);
+        return ticketRepository.save(ticket);
+    }
+
+    @Override
+    public Ticket denyTicket(Long id, boolean isDenied) {
+        var ticket = ticketRepository.findById(id).orElseThrow();
+        ticket.setDenied(isDenied);
+        return ticketRepository.save(ticket);
+    }
 }

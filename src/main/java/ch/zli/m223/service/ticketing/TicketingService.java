@@ -2,6 +2,7 @@ package ch.zli.m223.service.ticketing;
 
 import ch.zli.m223.model.AppUser;
 import ch.zli.m223.model.Ticket;
+import ch.zli.m223.model.impl.TicketImpl;
 
 import java.security.Principal;
 import java.time.LocalDate;
@@ -14,4 +15,7 @@ public interface TicketingService {
     Ticket getTicketById(Long id);
     void deleteTicket(Long id);
     Ticket createTicket(int halfDaysAmount, LocalDate startDate, String username);
+
+    Ticket acceptTicket(Long id, boolean isApproved);
+    Ticket denyTicket(Long id, boolean isDenied);
 }

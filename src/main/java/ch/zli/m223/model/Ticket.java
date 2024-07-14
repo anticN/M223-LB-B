@@ -10,4 +10,6 @@ public interface Ticket {
     boolean isApproved();
     boolean isDenied();
 
+    void setApproved(boolean isApproved);
+    void setDenied(boolean isDenied);
 }

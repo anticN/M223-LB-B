@@ -67,4 +67,14 @@ public class TicketImpl implements Ticket {
     public boolean isDenied() {
         return isDenied;
     }
+
+    @Override
+    public void setApproved(boolean isApproved) {
+        this.isApproved = isApproved;
+    }
+
+    @Override
+    public void setDenied(boolean isDenied) {
+        this.isDenied = isDenied;
+    }
 }
