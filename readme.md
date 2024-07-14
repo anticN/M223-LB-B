@@ -14,8 +14,4 @@ Der Server erzeugt beim Start auf Wunsch hin automatisch Testdaten.
 Die Testdatenerzeugung finden sie in [ServerInitialisation.java](./src/main/java/ch/zli/m223/init/ServerInitialisation.java), die Steuerung ob Testdaten erzeugt weden oder nicht in [application.properties](./src/main/resources/application.properties).
 
 ## REST-API Test
-Sie finden die passenden Postman-Scripts im './src/test/postman' Verzeichnis. 
-- [Register](./src/test/postman/Register.postman_collection.json)
-- [Login](./src/test/postman/Login.postman_collection.json)
-- [Admin](./src/test/postman/Admin.postman_collection.json)
-- [Member](./src/test/postman/Member.postman_collection.json)
+Sie finden die passenden Postman-Scripts in der Datei './src/main/java/ch.zli.m223/M223_LB_B.postman_collection.json' . 
